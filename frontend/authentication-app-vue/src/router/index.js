@@ -23,15 +23,4 @@ const router = createRouter({
   routes,
 });
 
-/* routes.beforeResolve((to, from, next) => {
-  if (to.name) {
-    NProgress.start();
-  }
-  next();
-});
-
-routes.afterEach((to, from) => {
-  NProgress.done();
-}); */
-
 export default router;

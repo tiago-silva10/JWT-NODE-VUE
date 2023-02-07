@@ -17,24 +17,23 @@
                   :class="{ 'is-invalid': isSubmitted && $v.loginForm.email.$error }"
                 />
                 <div
-                  v-if="isSubmitted && !v.loginForm.email.required"
+                  v-if="isSubmitted && !$v.loginForm.email.required"
                   class="invalid-feedback">O campo email é obrigatório!
                 </div>
               </label>
               <label for="password">
                 Senha:
                 <input
-                type="password" id="password"
-                placeholder="Digite sua senha"
-                class="form-control mb-5"
-                v-model="loginForm.password"
-                :class="{ 'is-invalid': isSubmitted && $v.loginForm.passsword.$error }"
+                  type="password" id="password"
+                  placeholder="Digite sua senha"
+                  class="form-control mb-5"
+                  v-model="loginForm.password"
+                  :class="{ 'is-invalid': isSubmitted && $v.loginForm.password.$error }"
                 />
                 <div
                   v-if="isSubmitted && !v.loginForm.password.required"
                   class="invalid-feedback">A senha é obrigatória!
                 </div>
-              />
               </label>
             </div>
             <p class="center">Não tem uma conta cadastrada?
@@ -56,7 +55,7 @@
 
 <script>
 
-import { required } from 'vuelidate/lib/validators';
+import { required } from '@vuelidate/validators';
 
 export default {
   name: 'loginComponent',
@@ -66,19 +65,19 @@ export default {
         email: null,
         password: null,
       },
-      isSubmitted: false
+
+      isSubmitted: false,
     };
   },
   validations: {
     loginForm: {
       email: { required },
-      password: { required }
-    }
+      password: { required },
+    },
   },
 
   methods: {
     loginSubmitUserForm() {
-
       this.isSubmitted = true;
 
       this.$v.$touch();
@@ -87,7 +86,7 @@ export default {
         return;
       }
 
-      alert("SUCCESS!" + JSON.stringify(this.loginForm));
+      alert('SUCCESS!' + JSON.stringify(this.loginForm));
     },
 
     async submitLoginUser() {},
@@ -95,4 +94,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  form {
+    margin-top: 70px;
+    height: auto;
+    padding-top: 100px;
+  }
+</style>
