@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Aplicação que lida com JWT com Node + Vue + MongoDB",
+  "description": "Aplicação lida com JWT, Node, Vue e MongoDB",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon",

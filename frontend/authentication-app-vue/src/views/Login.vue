@@ -1,6 +1,6 @@
 <template>
 
-    <div class="home">
+    <div class="login">
         <login />
     </div>
 
@@ -8,11 +8,11 @@
 
 <script>
 
-import Home from '@/components/auth-components/home/homeComponent.vue';
+import login from '@/components/loginComponent.vue';
 
 export default {
   components: {
-    Home,
+    login,
   },
 };
 

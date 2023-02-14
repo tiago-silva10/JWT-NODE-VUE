@@ -5,6 +5,7 @@ export default {
   async registerNewUser(newUser) {
     try {
       const response = await Api().post('/register', newUser);
+      console.log(response);
       const { token } = response.data;
       if (token) {
         localStorage.setItem('jwt', token);
