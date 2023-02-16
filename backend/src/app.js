@@ -15,7 +15,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-
 // to do: declarar rotas user.routes.js
 //app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
