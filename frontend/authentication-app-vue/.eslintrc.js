@@ -25,5 +25,6 @@ module.exports = {
     'jsx-a11y/label-has-associated-control': 'off',
     'jsx-a11y/label-has-for': 'off',
     'jsx-a11y/form-control-has-label': 'off',
+    'vuejs-accessibility/click-events-have-key-events': 'off',
   },
 };

@@ -52,7 +52,7 @@
 <script>
 import swal from 'sweetalert';
 import loginService from '@/Services/LoginService';
-import { required, email, minLength } from '@vuelidate/validators';
+import { required } from '@vuelidate/validators';
 import useVuelidate from '@vuelidate/core';
 
 export default {
@@ -71,8 +71,8 @@ export default {
   validations() {
     return {
       loginForm: {
-        email: { required, email },
-        password: { required, minLength: minLength(8) },
+        email: { required },
+        password: { required },
       },
     };
   },
